@@ -1,6 +1,7 @@
-package com.szczerbap.coinwallet.repository;
+package com.szczerbap.coinwallet.service;
 
 import com.szczerbap.coinwallet.model.User;
+import com.szczerbap.coinwallet.repository.UserRepository;
 import com.szczerbap.coinwallet.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
