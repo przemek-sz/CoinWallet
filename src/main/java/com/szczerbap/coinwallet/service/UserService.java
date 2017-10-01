@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 /**
  * Created by Przemek on 29.09.2017.
  */
-@Service
 public interface UserService {
 
     public void addUser(User user);
