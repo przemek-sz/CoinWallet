@@ -1,1 +1,8 @@
-<div>User List</div>
+<div ng-controller="UserController as userController">
+    <ul>
+        <li ng-repeat="user in userController.users">
+            {{user.userName}}-{{user.email}}
+        </li>
+    </ul>
+
+</div>

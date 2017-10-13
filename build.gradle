@@ -24,6 +24,12 @@ dependencies {
     compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.10.Final'
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.42'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.1'
+    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-config
+    compile group: 'org.springframework.security', name: 'spring-security-config', version: '4.2.3.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-web
+    compile group: 'org.springframework.security', name: 'spring-security-web', version: '4.2.3.RELEASE'
+
+
 
 
 

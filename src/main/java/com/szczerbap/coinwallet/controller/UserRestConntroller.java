@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * Created by Przemek on 01.10.2017.
  */
@@ -23,4 +25,19 @@ public class UserRestConntroller {
         userService.addUser(user);
         System.out.print("Dodawanie");
     }
+
+    public void updateUser(){
+
+    }
+
+    @RequestMapping(method = RequestMethod.GET)
+    public List<User> getAllUsers(){
+
+        return userService.getAllUsers();
+    }
+
+    //public User getUserByUserName(String userName){
+
+       // return userService.getByUsername(userName);
+   // }
 }

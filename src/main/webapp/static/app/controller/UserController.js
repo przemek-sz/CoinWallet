@@ -3,6 +3,7 @@ var app = angular.module('app')
 app.controller('UserController',function ($http) {
 
     var vm=this;
+    getUsersList();
     ///////////////////////////////////////////////////////////////////
     vm.addUser=function (user) {
 
@@ -13,6 +14,18 @@ app.controller('UserController',function ($http) {
         }).then(function succes() {
 
         },function error() {
+
+        });
+    };
+    //////////////////////////////////////////////////////////////////////
+    function getUsersList() {
+
+        $http({
+            method:'GET',
+            url:'/api/user'
+        }).then(function succes(response) {
+            vm.users=response.data;
+        },function error(response) {
 
         });
     };
