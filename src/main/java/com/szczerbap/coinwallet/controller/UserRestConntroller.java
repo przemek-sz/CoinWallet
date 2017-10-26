@@ -1,5 +1,6 @@
 package com.szczerbap.coinwallet.controller;
 
+import com.szczerbap.coinwallet.dto.UserDto;
 import com.szczerbap.coinwallet.model.User;
 import com.szczerbap.coinwallet.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,6 +22,8 @@ public class UserRestConntroller {
     @Autowired
     UserService userService;
 
+
+
     @RequestMapping(method = RequestMethod.POST)
     public void addUser(@RequestBody User user){
         userService.addUser(user);
@@ -31,9 +35,10 @@ public class UserRestConntroller {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<User> getAllUsers(){
+    public List<UserDto> getAllUsers(){
 
         return userService.getAllUsers();
+
     }
 
     //public User getUserByUserName(String userName){

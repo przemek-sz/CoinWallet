@@ -1,5 +1,7 @@
 package com.szczerbap.coinwallet.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -9,13 +11,18 @@ import java.util.Set;
  */
 @Entity
 public class UserRole {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String role;
 
     @ManyToMany(mappedBy = "roles")
+    @JsonBackReference
     private Set<User> users = new HashSet<>();
+
+
     /////////////////////////////////////////////////////////////////////////////////////////
 
 

@@ -1,10 +1,9 @@
 package com.szczerbap.coinwallet.service;
 
+import com.szczerbap.coinwallet.dto.UserDto;
 import com.szczerbap.coinwallet.model.User;
-import com.szczerbap.coinwallet.model.UserRole;
 import com.szczerbap.coinwallet.repository.UserRepository;
 import com.szczerbap.coinwallet.repository.UserRoleRepository;
-import com.szczerbap.coinwallet.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,12 +21,15 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository;
     @Autowired
     UserRoleRepository userRoleRepository;
+    @Autowired
+    BaseConverter<User,UserDto> baseConverter;
 
     @Override
     public void addUser(User user) {
         String DEFAULT_ROLE="ROLE_USER";
         user.getRoles().add(userRoleRepository.getByRole(DEFAULT_ROLE));
         userRepository.save(user);
+        System.out.println("Break point!!!!");
     }
 
     @Override
@@ -41,8 +43,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
+    public List<UserDto> getAllUsers() {
+
+        List<UserDto> usersDto=baseConverter.convertAll(userRepository.findAll());
+        return usersDto;
     }
 
     @Override

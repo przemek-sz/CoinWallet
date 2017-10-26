@@ -15,6 +15,7 @@ import java.util.Set;
 /**
  * Created by Przemek on 03.10.2017.
  */
+
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
