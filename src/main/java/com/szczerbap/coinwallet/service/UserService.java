@@ -1,8 +1,8 @@
 package com.szczerbap.coinwallet.service;
 
-import com.szczerbap.coinwallet.dto.UserDto;
+import com.szczerbap.coinwallet.dto.AllUserDto;
+import com.szczerbap.coinwallet.dto.UserRegistrationDto;
 import com.szczerbap.coinwallet.model.User;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -11,9 +11,9 @@ import java.util.List;
  */
 public interface UserService {
 
-    public void addUser(User user);
+    public void addUser(UserRegistrationDto user);
     public void updateUser(User user);
     public void removeUser(User user);
-    public List<UserDto> getAllUsers();
+    public List<AllUserDto> getAllUsers();
     public User getByUserName(String username);
 }

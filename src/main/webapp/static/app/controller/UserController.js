@@ -18,6 +18,10 @@ app.controller('UserController',function ($http) {
         });
     };
     //////////////////////////////////////////////////////////////////////
+    vm.resetForm=function (user) {
+        user.userName=null;
+    }
+    //////////////////////////////////////////////////////////////////////
     function getUsersList() {
 
         $http({

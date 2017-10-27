@@ -1,6 +1,6 @@
 package com.szczerbap.coinwallet.service;
 
-import com.szczerbap.coinwallet.dto.UserDto;
+import com.szczerbap.coinwallet.dto.AllUserDto;
 import com.szczerbap.coinwallet.model.User;
 import org.springframework.stereotype.Service;
 
@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
  * Created by Przemek on 26.10.2017.
  */
 @Service
-public class UserToDtoConverter implements BaseConverter<User,UserDto> {
+public class UserToDtoConverter implements BaseConverter<User, AllUserDto> {
 
     @Override
-    public UserDto convert(User from) {
+    public AllUserDto convert(User from) {
 
-        UserDto userDto= new UserDto();
+        AllUserDto userDto= new AllUserDto();
         userDto.setId(from.getId());
         userDto.setUserName(from.getUserName());
         userDto.setEmail(from.getEmail());

@@ -1,6 +1,8 @@
 package com.szczerbap.coinwallet.service;
 
+import com.szczerbap.coinwallet.dto.AllUserDto;
 import com.szczerbap.coinwallet.dto.UserDto;
+import com.szczerbap.coinwallet.dto.UserRegistrationDto;
 import com.szczerbap.coinwallet.model.User;
 import com.szczerbap.coinwallet.repository.UserRepository;
 import com.szczerbap.coinwallet.repository.UserRoleRepository;
@@ -22,14 +24,21 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserRoleRepository userRoleRepository;
     @Autowired
-    BaseConverter<User,UserDto> baseConverter;
+    BaseConverter<User, AllUserDto> baseConverter;
+    @Autowired
+    BaseConverter<UserRegistrationDto,User> registrationBaseConverter;
 
     @Override
-    public void addUser(User user) {
+    public void addUser(UserRegistrationDto userDto) {
+
         String DEFAULT_ROLE="ROLE_USER";
+
+        User user=new User();
+
+        user=registrationBaseConverter.convert(userDto);
         user.getRoles().add(userRoleRepository.getByRole(DEFAULT_ROLE));
+
         userRepository.save(user);
-        System.out.println("Break point!!!!");
     }
 
     @Override
@@ -43,9 +52,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserDto> getAllUsers() {
+    public List<AllUserDto> getAllUsers() {
 
-        List<UserDto> usersDto=baseConverter.convertAll(userRepository.findAll());
+        List<AllUserDto> usersDto=baseConverter.convertAll(userRepository.findAll());
         return usersDto;
     }
 
