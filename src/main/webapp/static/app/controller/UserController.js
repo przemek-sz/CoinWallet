@@ -12,14 +12,19 @@ app.controller('UserController',function ($http) {
             url:'/api/user',
             data:user
         }).then(function succes() {
+            vm.userForm.$setPristine();
 
         },function error() {
 
         });
+
+
+
     };
     //////////////////////////////////////////////////////////////////////
-    vm.resetForm=function (user) {
-        user.userName=null;
+    vm.resetForm=function () {
+        vm.userForm.$setPristine();
+
     }
     //////////////////////////////////////////////////////////////////////
     function getUsersList() {
