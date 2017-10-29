@@ -18,7 +18,7 @@ public class User {
     private String userName;
     private String password;
     private String email;
-    @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable
     private Set<UserRole> roles = new HashSet<>();
     ////////////////////////////////////////////////////////////////

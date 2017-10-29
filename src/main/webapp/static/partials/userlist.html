@@ -1,8 +1,8 @@
 <div ng-controller="UserController as userController">
     <ul>
         <li ng-repeat="user in userController.users">
-            {{user.userName}}-{{user.email}}
+            {{user.userName}}-{{user.email}} <button ng-click="userController.removeUser(user.userName)">Usun</button>
         </li>
     </ul>
-
+sad
 </div>

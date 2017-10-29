@@ -4,10 +4,7 @@ import com.szczerbap.coinwallet.dto.AllUserDto;
 import com.szczerbap.coinwallet.dto.UserRegistrationDto;
 import com.szczerbap.coinwallet.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,26 +19,33 @@ public class UserRestConntroller {
     UserService userService;
 
 
-
+    //==============================================================================
     @RequestMapping(method = RequestMethod.POST)
     public void addUser(@RequestBody UserRegistrationDto userDto){
 
         userService.addUser(userDto);
     }
-
+    //==============================================================================
     public void updateUser(){
 
     }
-
+    //==============================================================================
     @RequestMapping(method = RequestMethod.GET)
     public List<AllUserDto> getAllUsers(){
 
         return userService.getAllUsers();
 
     }
-
+    //==============================================================================
     //public User getUserByUserName(String userName){
 
        // return userService.getByUsername(userName);
    // }
+    //==============================================================================
+    @RequestMapping(value="/{userName}",method = RequestMethod.DELETE)
+    public void removeUser(@PathVariable String userName){
+        System.out.println(userName);
+        userService.removeUser(userService.getByUserName(userName));
+}
+    //==============================================================================
 }
