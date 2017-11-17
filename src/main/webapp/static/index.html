@@ -7,8 +7,14 @@
 <body>
 <a href="#!/">Strona Glowna</a>
 <a href="#!/userlist">Lista uzytkownikow</a>
-<a href="#!/loginpage">Logowanie</a>
+<div ng-show!="authenticated"><a href="#!/login">Logowanie</a></div>
 <a href="#!/signup">Rejestracja</a>
+<div ng-show="authenticated">
+    <div ng-controller="AuthenticationController as authController">
+        <button ng-click="authController.logout()">Wylogoj</button></div>
+    </div>
+</div>
+
 <div ng-view></div>
 
 
@@ -18,6 +24,9 @@
 <script src="static/lib/angular-route/angular-route.js"></script>
 <script src="static/app/app.js"></script>
 <script src="static/app/controller/UserController.js"></script>
+<script src="static/app/controller/AuthenticationController.js"></script>
+<script src="static/app/service/AuthenticationService.js"></script>
+<script src="static/app/service/TestService.js"></script>
 
 </body>
 </html>

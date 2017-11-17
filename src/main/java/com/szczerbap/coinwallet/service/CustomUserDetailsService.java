@@ -8,6 +8,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -15,7 +17,7 @@ import java.util.Set;
 /**
  * Created by Przemek on 03.10.2017.
  */
-
+@Service
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
