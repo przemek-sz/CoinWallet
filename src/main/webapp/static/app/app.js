@@ -24,3 +24,8 @@ app.config(function ($routeProvider,$httpProvider) {
         });
 
 });
+
+app.config(function ($routeProvider, $httpProvider) {
+
+    $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+});
