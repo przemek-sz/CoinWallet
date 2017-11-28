@@ -1,9 +1,16 @@
 var app = angular.module('app', ['ngRoute']);
 
-app.config(function ($routeProvider,$httpProvider) {
+//=============================================================================
+app.run(function (ConfigService) {
+
+    ConfigService.load();
+
+});
+//=============================================================================
+app.config(['$routeProvider',function ($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'static/partials/mainpage.html'
+            templateUrl: 'static/partials/mainpage.html',
         })
         .when('/login', {
             templateUrl: 'static/partials/loginpage.html',
@@ -23,9 +30,9 @@ app.config(function ($routeProvider,$httpProvider) {
             controllerAs:'authController'
         });
 
-});
-
-app.config(function ($routeProvider, $httpProvider) {
+}]);
+//=============================================================================
+app.config(['$httpProvider',function ($httpProvider) {
 
     $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-});
+}]);
