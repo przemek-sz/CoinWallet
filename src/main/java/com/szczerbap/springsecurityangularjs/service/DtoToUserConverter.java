@@ -1,7 +1,7 @@
-package com.szczerbap.coinwallet.service;
+package com.szczerbap.springsecurityangularjs.service;
 
-import com.szczerbap.coinwallet.dto.UserRegistrationDto;
-import com.szczerbap.coinwallet.model.User;
+import com.szczerbap.springsecurityangularjs.dto.UserRegistrationDto;
+import com.szczerbap.springsecurityangularjs.model.User;
 import org.springframework.stereotype.Service;
 
 /**

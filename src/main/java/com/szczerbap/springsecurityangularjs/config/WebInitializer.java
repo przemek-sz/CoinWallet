@@ -1,4 +1,4 @@
-package com.szczerbap.coinwallet.config;
+package com.szczerbap.springsecurityangularjs.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

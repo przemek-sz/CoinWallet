@@ -1,4 +1,4 @@
-package com.szczerbap.coinwallet.model;
+package com.szczerbap.springsecurityangularjs.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 

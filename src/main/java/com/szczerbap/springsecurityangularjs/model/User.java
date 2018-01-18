@@ -1,6 +1,4 @@
-package com.szczerbap.coinwallet.model;
-
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+package com.szczerbap.springsecurityangularjs.model;
 
 import javax.persistence.*;
 import java.util.HashSet;

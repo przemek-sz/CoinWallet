@@ -1,9 +1,6 @@
-package com.szczerbap.coinwallet.service;
-
-import org.springframework.stereotype.Service;
+package com.szczerbap.springsecurityangularjs.service;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**

@@ -1,11 +1,10 @@
-package com.szczerbap.coinwallet.service;
+package com.szczerbap.springsecurityangularjs.service;
 
-import com.szczerbap.coinwallet.dto.AllUserDto;
-import com.szczerbap.coinwallet.dto.UserDto;
-import com.szczerbap.coinwallet.dto.UserRegistrationDto;
-import com.szczerbap.coinwallet.model.User;
-import com.szczerbap.coinwallet.repository.UserRepository;
-import com.szczerbap.coinwallet.repository.UserRoleRepository;
+import com.szczerbap.springsecurityangularjs.dto.AllUserDto;
+import com.szczerbap.springsecurityangularjs.dto.UserRegistrationDto;
+import com.szczerbap.springsecurityangularjs.model.User;
+import com.szczerbap.springsecurityangularjs.repository.UserRepository;
+import com.szczerbap.springsecurityangularjs.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

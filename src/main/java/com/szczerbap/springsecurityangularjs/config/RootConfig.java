@@ -1,4 +1,4 @@
-package com.szczerbap.coinwallet.config;
+package com.szczerbap.springsecurityangularjs.config;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;
@@ -22,7 +22,7 @@ import java.util.Map;
  */
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.szczerbap.coinwallet.repository")
+@EnableJpaRepositories(basePackages = "com.szczerbap.springsecurityangularjs.repository")
 public class RootConfig {
 
     @Bean
@@ -52,7 +52,7 @@ public class RootConfig {
         emf.setJpaPropertyMap(properties);
         emf.setDataSource(ds);
         emf.setJpaVendorAdapter(adapter);
-        emf.setPackagesToScan("com.szczerbap.coinwallet.model");
+        emf.setPackagesToScan("com.szczerbap.springsecurityangularjs.model");
         return emf;
     }
 

@@ -1,4 +1,4 @@
-package com.szczerbap.coinwallet.controller;
+package com.szczerbap.springsecurityangularjs.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;

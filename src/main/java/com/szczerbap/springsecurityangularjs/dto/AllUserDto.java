@@ -1,4 +1,4 @@
-package com.szczerbap.coinwallet.dto;
+package com.szczerbap.springsecurityangularjs.dto;
 
 import org.springframework.stereotype.Component;
 

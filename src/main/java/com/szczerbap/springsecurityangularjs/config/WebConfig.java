@@ -1,19 +1,16 @@
-package com.szczerbap.coinwallet.config;
+package com.szczerbap.springsecurityangularjs.config;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 /**
  * Created by Przemek on 28.09.2017.
  */
 @Configuration
-@ComponentScan({ "com.szczerbap.coinwallet" })
+@ComponentScan({"com.szczerbap.springsecurityangularjs"})
 @EnableWebMvc
 public class WebConfig extends WebMvcConfigurerAdapter {
 

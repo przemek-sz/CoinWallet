@@ -1,6 +1,6 @@
-package com.szczerbap.coinwallet.repository;
+package com.szczerbap.springsecurityangularjs.repository;
 
-import com.szczerbap.coinwallet.model.User;
+import com.szczerbap.springsecurityangularjs.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

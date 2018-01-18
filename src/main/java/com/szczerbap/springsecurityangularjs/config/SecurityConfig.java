@@ -1,8 +1,7 @@
-package com.szczerbap.coinwallet.config;
+package com.szczerbap.springsecurityangularjs.config;
 
-import com.szczerbap.coinwallet.service.CustomUserDetailsService;
+import com.szczerbap.springsecurityangularjs.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -10,7 +9,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 /**
@@ -18,7 +16,7 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
  */
 @Configuration
 @EnableWebSecurity
-@ComponentScan({ "com.szczerbap.coinwallet" })
+@ComponentScan({"com.szczerbap.springsecurityangularjs"})
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired

@@ -1,8 +1,8 @@
-package com.szczerbap.coinwallet.controller;
+package com.szczerbap.springsecurityangularjs.controller;
 
-import com.szczerbap.coinwallet.dto.AllUserDto;
-import com.szczerbap.coinwallet.dto.UserRegistrationDto;
-import com.szczerbap.coinwallet.service.UserService;
+import com.szczerbap.springsecurityangularjs.dto.AllUserDto;
+import com.szczerbap.springsecurityangularjs.dto.UserRegistrationDto;
+import com.szczerbap.springsecurityangularjs.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
